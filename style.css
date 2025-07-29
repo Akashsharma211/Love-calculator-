@@ -1,0 +1,163 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    background-image: url("Garden-Anime-Romance-Desktop-Wallpaper-109686.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+html {
+    height: 100%;
+}
+
+#content-box {
+    width: 400px;
+    height: 600px;
+    background: linear-gradient(135deg, #38839c, #57c785, #eddd53);
+    padding: 20px;
+    margin: 0 auto;
+    margin-top: 50px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    #content-box {
+    /* ...existing styles... */
+    opacity: 0;
+    transform: translateY(-30px);
+    animation: slideIn 1s forwards;
+}
+
+@keyframes slideIn {
+    to {
+        opacity: 0;
+        transform: translateY(0);
+    }
+}
+    transition: all 0.3s ease;
+}
+
+#calculate:hover {
+    background-color: #ff69b4;
+    transform: scale(1.1);
+    box-shadow: 0 0 20px #ffb6c1;
+    transition: all 0.3s ease;
+}
+
+#calculate {
+    width: 150px;
+    height: 50px;
+
+    background-color: pink;
+    color: white;
+    font-size: 20px;
+    border: none;
+    border-radius: 10px;
+}
+
+#result-percentage {
+    font-size: 50px;
+}
+
+
+ h1.neon-text {
+    font-size: 2rem;
+    color: #fff;
+    text-shadow: 0 0 5px #ff005e, 0 0 10px #ff005e, 0 0 20px #ff005e, 0 0 40px #ff005e, 0 0 80px #ff005e;
+    animation: glow 1.5s infinite alternate;
+}
+
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 5px #ff005e, 0 0 10px #ff005e, 0 0 20px #ff005e, 0 0 40px #ff005e, 0 0 80px #ff005e;
+    }
+    100% {
+        text-shadow: 0 0 10px #00d4ff, 0 0 20px #00d4ff, 0 0 40px #00d4ff, 0 0 80px #00d4ff, 0 0 160px #00d4ff;
+    }
+}
+
+#result-percentage {
+    font-size: 50px;
+    opacity: 0;
+    transform: scale(0.8);
+    animation: fadeGrow 1s forwards;
+    color: #f0f0f0;
+    text-shadow: 0ch 0ch 10px rgba(22, 33, 227, 0.5);
+    align-items: center;
+}
+
+@keyframes fadeGrow {
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    min-width: unset;
+    text-align: left;
+    margin-right: 0;
+    margin-bottom: 5px;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    align-items: center;
+}
+
+@media (max-width: 700px) {
+    #content-box {
+        width: 95vw;
+        height: auto;
+        min-height: 350px;
+        margin-top: 20px;
+        padding: 10px;
+    }
+    .form-group input {
+        width: 90vw;
+        max-width: 95vw;
+        font-size: 1rem;
+    }
+    #calculate {
+        width: 90vw;
+        font-size: 1rem;
+        height: 45px;
+    }
+    h1.neon-text {
+        font-size: 1.5rem;
+    }
+    #result-percentage {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 400px) {
+    #content-box {
+        padding: 5px;
+    }
+    .form-group input {
+        padding: 5px;
+        font-size: 0.9rem;
+    }
+    #calculate {
+        font-size: 0.9rem;
+        height: 40px;
+    }
+    h1.neon-text {
+        font-size: 1.2rem;
+    }
+    #result-percentage {
+        font-size: 1.2rem;
+    }
+}
